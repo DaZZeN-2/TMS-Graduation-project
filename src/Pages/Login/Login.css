@@ -1,0 +1,116 @@
+.wrapper-login {
+    background-image: url(../../img/backgroung.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-wrapper {
+    width: 574px;
+    height: 540px;
+    border-radius: 10px;
+    background-color: #242426;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    font-family: 'Exo 2';
+    font-weight: 600;
+    font-size: 24px;
+    color: #FFFFFF;
+}
+
+.title-container {
+    margin-bottom: 20px;
+}
+
+.login-container {
+    width: 500px;
+    height: 465px;
+    margin-bottom: 10px;
+}
+
+.email-input {
+    width: 500px;
+    height: 56px;
+    border-radius: 10px;
+    background-color: #323537;
+    color: #80858B;
+    border: none;
+    margin-top: 8px;
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    text-indent: 20px;
+    }
+
+.password-input {
+    width: 500px;
+    height: 56px;
+    border-radius: 10px;
+    background-color: #323537;
+    color: #80858B;
+    border: none;
+    margin-top: 8px;
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    text-indent: 20px;
+}
+
+.password-container {
+    margin-top: 18px;
+}
+
+label {
+    font-family: 'Exo 2';
+    font-weight: 600;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.button-container button {
+    width: 500px;
+    height: 56px;
+    border-radius: 10px;
+    background: #7B61FF;
+    font-family: 'Exo 2';
+    font-weight: 600;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+.forgot-pass {
+    color: #80858B;
+    text-decoration: none;
+
+}
+
+.forgot-pass-container {
+    margin-top: 8px;
+}
+
+.register-text {
+    color: #80858B;
+}
+
+.register-link {
+    color: #7B61FF;
+    text-decoration: none;
+}
+
+.register-text-container {
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,13 @@
+.wrapper {
+    background-color: black;
+    min-height: 100vh;
+}
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrap {
+    display: flex;
+}

@@ -1,0 +1,29 @@
+.wrapper-register {
+    background-image: url(../../img/backgroung.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.register-wrapper {
+    width: 574px;
+    height: 732px;
+    border-radius: 10px;
+    background-color: #242426;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.global-register-container {
+    margin-top: -135px;
+}
+
+.register-text-container {
+    margin-top: 32px;
+}
+
+.email-container {
+    margin-top: 18px;
+}

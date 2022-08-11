@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@500&display=swap');
+
+.dropbtn {
+    background-color: black;
+    color: #FFFFFF;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    width: 253px;
+    height: 49px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: black;
+}
+
+.dropbtn:hover {
+    color: #7B61FF;
+}
+
+
+.dropdown-menu {
+    position: relative;
+    display: inline-block;
+    margin-left: 52px;
+    margin-top: 38px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #242426;
+    min-width: 228px;
+    height: 112px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+.dropdown-content button {
+    color: #FFFFFF;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    background-color: #242426;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    padding-top: 20px;
+    cursor: pointer;
+    width: 242px;
+}
+
+.dropdown-content button:hover {
+    color: #7B61FF;
+
+}
+
+
+.show {
+    display:block;
+}
+
+.avatar {
+    background-color: #7B61FF;
+    width: 43px;
+    height: 43px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Exo 2';
+    font-weight: 700;
+    font-size: 18px;
+    margin-right: 10px;
+    color: #FFFFFF;
+}
+
+.Vector {
+    margin-left: 33px;
+}
+
+.sign-in-text {
+    color: #FFFFFF;
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.sign-in-text:hover {
+    color: #7B61FF;
+}
+
+.sign-in-link {
+    text-decoration: none;
+    width: 153px;
+}
+
+.Vector1 {
+    margin-left: 33px;
+}
+
+.line-wrapper {
+    height: 1px;
+    background-color: #323537;
+}
+
+.email-info {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

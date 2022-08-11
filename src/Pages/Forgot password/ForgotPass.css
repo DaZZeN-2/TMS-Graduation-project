@@ -1,0 +1,60 @@
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../../img/backgroung.png);
+}
+
+.form-container {
+    width: 574px;
+    height: 340px;
+    border-radius: 10px;
+    background-color: #242426;
+}
+
+.reset-pass-title {
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    color: #FFFFFF;
+}
+
+.content-container {
+    margin-left: 40px;
+    margin-top: 40px;
+}
+
+.reset-pass-input {
+    width: 484px;
+    height: 56px;
+    border-radius: 10px;
+    background-color: #323537;
+    border: none;
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #80858B;
+    text-indent: 20px;
+    margin-top: 8px;
+}
+
+.reset-pass-lable-container {
+    margin-top: 40px;
+}
+
+.forgot-pass-button {
+    width: 494px;
+    height: 56px;
+    background-color: #7B61FF;
+    border-radius: 10px;
+    color: #FFFFFF;
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    margin-top: 40px;
+    cursor: pointer;
+}

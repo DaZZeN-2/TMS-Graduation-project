@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
+import AppRouter from './Routes/AppRouter';
+import { Provider } from 'react-redux';
+import {store} from './Redux/store'
+import { ThemeModeProvider } from './context/ThemeModeProvider';
+import { Theme } from "./context/themeModeContext";
+import { useState } from 'react';
 import './App.css';
 
-function App() {
+
+const App = () => {
+  const [theme, setTheme] = useState(Theme.Light);
+  const onChangeTheme = (value: Theme) => {
+    setTheme(value);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+        <Provider store={store}>
+          <ThemeModeProvider theme={theme} onChangeTheme={onChangeTheme}>
+            <div className={theme ? "App" : "App _dark"}>
+            <AppRouter/>
+          </div>
+          </ThemeModeProvider>
+        </Provider>
   );
 }
-
 export default App;
+
+

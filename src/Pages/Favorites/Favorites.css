@@ -1,0 +1,20 @@
+.FavoritesView-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 887px;
+    height: 88vh;
+}
+
+.favorite-text p {
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    color: #80858B;
+}
+
+.favorite-text {
+    display: flex;
+    justify-content: center;
+}

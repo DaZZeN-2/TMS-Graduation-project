@@ -1,0 +1,49 @@
+.card-wrapper {
+    display: flex;
+    margin-top: 56px;
+    margin-right: 40px;
+}
+
+.card-image {
+    width: 216px;
+    height: 285px;
+    border-radius: 20px;
+}
+
+.film-title {
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.film-title:hover {
+    text-decoration: underline;
+}
+
+.film-categories {
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #AFB2B6;
+    display: flex;
+    cursor: pointer;
+}
+
+.film-categories:hover {
+    text-decoration: underline;
+}
+
+.card-container-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1032px;
+}
+
+.film-card-wrapper {
+    width: 218px;
+    cursor: pointer;
+}

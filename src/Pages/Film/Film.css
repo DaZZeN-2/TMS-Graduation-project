@@ -1,0 +1,348 @@
+.post-wrapper {
+    background-color: black;
+    color: white;
+    height: 100vh;
+    display: flex;
+}
+
+.post-img-wrapper {
+    margin-top: 56px;
+}
+
+.post-img {
+    border-radius: 20px;
+    width: 266px;
+    height: 356px;
+}
+
+.content-wrapper {
+    display: flex;
+    margin-top: 42px;
+    margin-left: 42px;
+}
+
+.categories {
+    color: #AFB2B6;
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.post-title {
+    color: #FFFFFF;
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    margin: 0;
+}
+
+.post-discription-wrapper{
+    width: 576px;
+}
+
+.post-discription-text {
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+.film-year-wrapper {
+    display: flex;
+}
+
+
+.film-year {
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: #AFB2B6;
+}
+
+.film-year-data {
+    margin-right: 103px;
+}
+
+.film-year-data-text {
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+/* ----------------- */
+
+.film-release-wrapper {
+    display: flex;
+}
+
+
+.film-release {
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: #AFB2B6;
+}
+
+.film-release-data {
+    margin-right: 77px;
+}
+
+.film-release-data-text {
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+/* ----------------- */
+
+.film-boxoffice-wrapper {
+    display: flex;
+}
+
+
+.film-boxoffice {
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: #AFB2B6;
+}
+
+.film-boxoffice-data {
+    margin-right: 66px;
+}
+
+.film-boxoffice-data-text {
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+/* ----------------- */
+
+.film-country-wrapper {
+    display: flex;
+}
+
+
+.film-country {
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: #AFB2B6;
+}
+
+.film-country-data {
+    margin-right: 77px;
+}
+
+.film-country-data-text {
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+/* ----------------- */
+
+.film-production-wrapper {
+    display: flex;
+}
+
+
+.film-production {
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: #AFB2B6;
+}
+
+.film-production-data {
+    margin-right: 55px;
+}
+
+.film-production-data-text {
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+/* ----------------- */
+
+.film-actors-wrapper {
+    display: flex;
+}
+
+
+.film-actors {
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: #AFB2B6;
+}
+
+.film-actors-data {
+    margin-right: 87px;
+}
+
+.film-actors-data-text {
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+/* ----------------- */
+
+.film-director-wrapper {
+    display: flex;
+}
+
+
+.film-director {
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: #AFB2B6;
+}
+
+.film-director-data {
+    margin-right: 77px;
+}
+
+.film-director-data-text {
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+/* ----------------- */
+
+.film-writer-wrapper {
+    display: flex;
+}
+
+
+.film-writer {
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: #AFB2B6;
+}
+
+.film-writer-data {
+    margin-right: 81px;
+}
+
+.film-writer-data-text {
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+.post-rating-and-runtime-wrapper {
+    display: flex;
+    margin-top: 26px;
+    margin-bottom: 42px;
+}
+
+.post-rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    width: 37px;
+    height: 28px;
+    background-color: #00A340;
+}
+
+.post-rating-text {
+    margin: 0;
+    color: #FFFFFF;
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.post-rating-imdb {
+    width: 79px;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #323537;
+    border-radius: 6px;
+    gap: 10px;
+    margin-left: 20px;
+}
+
+.imdb-img {
+    width: 32px;
+    height: 12px;
+}
+
+.post-runtime {
+    width: 73px;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #323537;
+    border-radius: 6px;
+    margin-left: 20px;
+}
+
+.post-runtime-text {
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+.favorite-button {
+    background-color: #323537;
+    border-radius: 10px 0 0 10px;
+    width: 133px;
+    height: 56px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons-wrapper {
+    display: flex;
+}
+
+.share-button {
+    background-color: #323537;
+    border-radius: 0 10px 10px 0;
+    width: 133px;
+    height: 56px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

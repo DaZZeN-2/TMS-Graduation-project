@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@500&display=swap');
+
+.menu-wrapper {
+    width: 270px;
+    height: 80vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.home-link {
+    margin-left: 65px;
+    color: #80858B;
+    text-decoration: none;
+    font-family: 'Exo 2', 'sans-serif';
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.home-link.active {
+    color: #7B61FF;
+}
+
+
+.trends-link {
+    margin-left: 70px;
+    color: #80858B;
+    text-decoration: none;
+    font-family: 'Exo 2', 'sans-serif';
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.trends-link.active {
+    color: #7B61FF;
+}
+
+.favorites-link {
+    margin-left: 70px;
+    color: #80858B;
+    text-decoration: none;
+    font-family: 'Exo 2', 'sans-serif';
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.favorites-link.active {
+    color: #7B61FF;
+}
+
+.settings-link {
+    margin-left: 66px;
+    color: #80858B;
+    text-decoration: none;
+    font-family: 'Exo 2', 'sans-serif';
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.settings-link.active {
+    color: #7B61FF;
+}
+
+.home {
+    margin-top: 64px;
+}
+
+.trends {
+    margin-top: 25px;
+}
+
+.favorites {
+    margin-top: 25px;
+}
+
+.settings {
+    margin-top: 25px;
+}
+
+.home-link img {
+    padding-right: 23px;
+}
+
+.trends-link img {
+    padding-right: 23px;
+}
+
+.favorites-link img {
+    padding-right: 23px;
+}
+
+.settings-link img {
+    padding-right: 23px;
+}
