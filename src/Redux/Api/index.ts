@@ -1,11 +1,20 @@
 import { create } from 'apisauce'
 
-const API = create ({
+const API = create({
+    baseURL: "http://www.omdbapi.com/",
+    headers: {}
+})
+
+const APIS = create ({
     baseURL: "https://kinobd.ru/api/films",
 })
 
-const getFilms = () => {
-    return API.get('')
+const getFilm = (i: string, key: string) => {
+    return API.get('', {i, apikey: key})
 }
 
-export { getFilms };
+const Films = () => {
+    return APIS.get('')
+}
+
+export { getFilm, Films };
