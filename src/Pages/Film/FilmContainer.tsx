@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom';
 import './Film.css'
 import Header from '../../Components/header/Header';
 import Menu from '../../Components/menu/Menu';
-import { Films, getFilm } from '../../Redux/Api';
+import { getFilms } from '../../Redux/Api';
 import { FilmContainerParams } from '../../types';
 
 
@@ -15,7 +15,7 @@ const FilmContainer: FC = () => {
     const params = useParams<FilmContainerParams>();
     
     useEffect(() => {
-        Films()
+        getFilms()
         .then((res:any) => {
             setMovie(res.data)
     })
