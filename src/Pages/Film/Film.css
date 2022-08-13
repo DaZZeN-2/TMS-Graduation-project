@@ -322,7 +322,6 @@
 }
 
 .favorite-button {
-    background-color: #323537;
     border-radius: 10px 0 0 10px;
     width: 133px;
     height: 56px;
@@ -330,14 +329,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border: none;
+}
+
+.favorite-button:hover {
+    background-color: #7B61FF;
 }
 
 .buttons-wrapper {
     display: flex;
+    margin-top: 10px;
 }
 
 .share-button {
-    background-color: #323537;
     border-radius: 0 10px 10px 0;
     width: 133px;
     height: 56px;
@@ -345,4 +349,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border: none;
+}
+
+.share-button:hover {
+    background-color: #7B61FF;
 }

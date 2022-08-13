@@ -5,7 +5,7 @@ export interface IMovie {
     id: string,
     genres: string,
     rating_imdb: string,
-    time: string,
+    time_minutes: string,
     description: string,
     year: string,
     premiere_world: string,
@@ -16,6 +16,5 @@ export interface IMovie {
 }
 
 export type FilmContainerParams = {
-    imdb: string,
-    id: string
+    id: string,
 }

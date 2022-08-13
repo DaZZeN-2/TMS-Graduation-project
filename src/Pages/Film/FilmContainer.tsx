@@ -5,32 +5,37 @@ import { useParams } from 'react-router-dom';
 import './Film.css'
 import Header from '../../Components/header/Header';
 import Menu from '../../Components/menu/Menu';
-import { Films, getFilm } from '../../Redux/Api';
+import { getFilms } from '../../Redux/Api';
 import { FilmContainerParams } from '../../types';
+import { useThemeContext } from '../../context/themeModeContext';
 
 
 const FilmContainer: FC = () => {
 
-    const [movie, setMovie] = useState<IMovie []>([]);
+    const value = useThemeContext();
+    const themeClass = value.theme==='dark' ? "dark-theme" : "light-theme"
+
+    const [movie, setMovie] = useState<IMovie | null>(null);
     const params = useParams<FilmContainerParams>();
     
     useEffect(() => {
-        Films()
+        getFilms()
         .then((res:any) => {
-            setMovie(res.data)
+            setMovie(res.data.data.find((movie:IMovie) => Number(movie.id)===Number(params.id)))
+            console.log(res.data.data.find((movie:IMovie) => Number(movie.id)===Number(params.id)))
     })
     .catch(error => {
         console.error(error);
     });
-    }, [params.imdb])
+    }, [params.id])
 
     return (
-        <div className="wrapper">
-        <Header/>
+        <div className={`wrapper ${themeClass}`}>
+            <Header/>
         <div className="wrap">
-        <Menu activeStyle={Object}/>
+            <Menu activeStyle={Object}/>
         <div>
-            {movie.map(movie =><FilmView movie={movie} key={movie.id}/>)}
+            <FilmView movie={movie} key={movie?.id}/>
         </div>
         
         </div>

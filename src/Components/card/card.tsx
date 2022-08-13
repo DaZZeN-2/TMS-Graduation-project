@@ -2,12 +2,16 @@ import {FC} from "react";
 import './card.css'
 import { IMovie } from '../../types'
 import { useNavigate } from "react-router-dom";
+import { useThemeContext } from "../../context/themeModeContext";
 
 interface CardProps {
     movie: IMovie,
 }
 
 const Card: FC<CardProps> = ({movie}) => {
+
+    const value = useThemeContext();
+    const themeClass = value.theme==='dark' ? "dark-theme" : "light-theme"
 
     const navigate = useNavigate()
 
@@ -17,8 +21,8 @@ const Card: FC<CardProps> = ({movie}) => {
             <div>
                 <img className="card-image" src={movie.big_poster} alt="cardIMG" />
             </div>
-                <h2 className="film-title">{movie.name_russian}</h2>
-                {/* <p className="film-categories">{movie.genres}</p> */}
+                <h2 className={`film-title ${themeClass}`}>{movie.name_russian}</h2>
+                {/* <p className={`film-categories ${themeClass}`}">{movie.genres}</p> */}
             </div>
         </div>
     )

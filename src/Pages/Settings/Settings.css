@@ -92,7 +92,7 @@
     margin-left: 40px;
 }
 
-.color-mode-text-wrapper h3 {
+.color-mode-title {
     color: #FFFFFF;
     font-family: 'Exo 2';
     font-style: normal;
@@ -100,7 +100,7 @@
     font-size: 16px;
 }
 
-.color-mode-text-wrapper p {
+.color-mode-text {
     color: #AFB2B6;
     font-family: 'Exo 2';
     font-style: normal;
@@ -192,6 +192,7 @@
     font-size: 16px;
     color: #FFFFFF;
     line-height: 24px;
+    border: none;
     }
 
 .button-save {
@@ -205,4 +206,5 @@
     font-size: 16px;
     color: #FFFFFF;
     line-height: 24px;
+    border: none;
 }

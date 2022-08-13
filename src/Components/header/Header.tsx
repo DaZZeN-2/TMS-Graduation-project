@@ -4,7 +4,7 @@ import Logo from '../../img/pixema.png';
 import {Link} from "react-router-dom";
 import { RouteNames } from "../../Routes";
 import ProfileMenu from '../ProfileMenu/ProfileMenu'
-import Filter from '../../img/filter-icon.png'
+import Search from '../Search/SearchInput'
 
 interface HeaderProps {
 
@@ -20,13 +20,10 @@ const Header: FC<HeaderProps> = () => {
                 <div className="Logo">
                     <Link to={RouteNames.HOME}><img className="Logo" src={Logo} alt="Logo"/></Link>
                 </div>
-                <div className="Search">
-                    <input onChange={(e) => console.log(e.target.value)} className="search-input" placeholder="Search" type="text"></input>
-                    <img className="filter-icon" src={Filter} alt='filter'/>
-                </div>
                 <div>
-                    <ProfileMenu/>
+                    <Search/>
                 </div>
+                    <ProfileMenu/>
             </div>
         </div>
     )

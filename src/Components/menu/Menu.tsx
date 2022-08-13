@@ -6,6 +6,7 @@ import Home from '../../img/Home.png';
 import Favorites from '../../img/Favorites.png';
 import Trends from '../../img/Trends.png';
 import Settings from '../../img/Settings.png';
+import { useThemeContext } from "../../context/themeModeContext";
 
 
 interface MenuProps {
@@ -15,8 +16,12 @@ interface MenuProps {
 
 
 const Menu: FC<MenuProps> = () => {
+
+    const value = useThemeContext();
+    const themeClass = value.theme==='dark' ? "dark-theme" : "light-theme"
+    
     return (
-        <div className="menu-wrapper">
+        <div className={`menu-wrapper ${themeClass}`}>
         <div>
             <div className="home">
                 <NavLink className="home-link" to={RouteNames.HOME}><img src={Home} alt="Home" />Home</NavLink>

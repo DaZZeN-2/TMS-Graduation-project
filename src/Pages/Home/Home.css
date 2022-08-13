@@ -1,6 +1,5 @@
 .wrapper {
-    background-color: black;
-    min-height: 100vh;
+    min-height: 120vh;
 }
 
 .header-wrapper {
@@ -10,4 +9,11 @@
 
 .wrap {
     display: flex;
+}
+
+.light-theme {
+    background-color: white;
+}
+.dark-theme {
+    background-color: black;
 }

@@ -8,17 +8,19 @@ import './App.css';
 
 
 const App = () => {
+  const [themeClass, setThemeClass] = useState<string>('dark-theme')
   const [theme, setTheme] = useState(Theme.Light);
   const onChangeTheme = (value: Theme) => {
+    setThemeClass(theme==='dark' ? "dark-theme" : "light-theme")
     setTheme(value);
   };
 
   return (
         <Provider store={store}>
           <ThemeModeProvider theme={theme} onChangeTheme={onChangeTheme}>
-            <div className={theme ? "App" : "App _dark"}>
+            {/* <div className={themeClass}> */}
             <AppRouter/>
-          </div>
+          {/* </div> */}
           </ThemeModeProvider>
         </Provider>
   );

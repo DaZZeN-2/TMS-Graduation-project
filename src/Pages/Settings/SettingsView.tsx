@@ -10,57 +10,63 @@ const SettingsView: FC = () => {
         onChangeTheme(themeValue);
     }
 
+    const value = useThemeContext();
+    const themeClass = value.theme==='dark' ? "dark-form" : "light-form"
+    const themeClassInput = value.theme==='dark' ? "dark-input" : "light-input"
+    const themeClassText = value.theme==='dark' ? "dark-text" : "light-text"
+    
+
     return (
             <div className="Settings-global-wrapper">
-                <h2 className="Profile-title">Profile</h2>
-                <div className="name-wrapper"> 
+                <h2 className={`Profile-title ${themeClassText}`}>Profile</h2>
+                <div className={`name-wrapper ${themeClass}`}> 
                     <div className="name-input-wrapper">
                         <div className="name-settings-wrapper">
                             <label htmlFor="Name">Name</label>
                         </div>
-                        <input className="name-settings-input" type="text" id="Name" placeholder="Name"/>
+                        <input className={`name-settings-input ${themeClassInput}`} type="text" id="Name" placeholder="Name"/>
                     </div>
                     
                     <div className="email-input-wrapper">
                         <div className="email-settings-wrapper">
                         <label htmlFor="Email">Email</label>
                         </div>
-                        <input className="email-settings-input" type="email" id="Email" placeholder="Email"/>
+                        <input className={`email-settings-input ${themeClassInput}`} type="email" id="Email" placeholder="Email"/>
                     </div>
                 </div>
 
                 <div>
-                <h2 className="Profile-title">Password</h2>
-                <div className="change-password-wrapper">
+                <h2 className={`Profile-title ${themeClassText}`}>Password</h2>
+                <div className={`change-password-wrapper ${themeClass}`}>
                     <div className="name-input-wrapper">
                         <div className="name-settings-wrapper">
                             <label htmlFor="Name">Password</label>
                         </div>
-                        <input className="name-settings-input" type="password" id="Name" placeholder="Your password"/>
+                        <input className={`name-settings-input ${themeClassInput}`} type="password" id="Name" placeholder="Your password"/>
                     </div>
                 <div className="confirm-pass">
                     <div className="email-input-wrapper">
                         <div className="email-settings-wrapper">
                         <label htmlFor="Email">New password</label>
                         </div>
-                        <input className="email-settings-input" type="password" id="Email" placeholder="New password"/>
+                        <input className={`email-settings-input ${themeClassInput}`} type="password" id="Email" placeholder="New password"/>
                     </div>
                     <div className="email-input-wrapper">
                         <div className="email-settings-wrapper">
                         <label htmlFor="Email">Confirm password</label>
                         </div>
-                        <input className="email-settings-input" type="password" id="Email" placeholder="Confirm password"/>
+                        <input className={`email-settings-input ${themeClassInput}`} type="password" id="Email" placeholder="Confirm password"/>
                     </div>
                 </div>
                 </div>
                 </div>
                 <div>
                     <div className="color-mode-settings-wrapper">
-                    <h2 className="Profile-title">Color mode</h2>
-                        <div className="color-mode-wrapper">
+                    <h2 className={`Profile-title ${themeClassText}`}>Color mode</h2>
+                        <div className={`color-mode-wrapper ${themeClass}`}>
                             <div className="color-mode-text-wrapper">
-                                <h3>Dark</h3>
-                                <p>Use dark thema</p>
+                                <h3 className={`color-mode-title ${themeClass}`}>Dark</h3>
+                                <p className={`color-mode-text ${themeClass}`}>Use dark thema</p>
                             </div>
                         <div className="dark-mode-switcher">
                             <label className="switch">

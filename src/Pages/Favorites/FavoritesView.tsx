@@ -1,9 +1,11 @@
 import {FC} from "react";
+import { useThemeContext } from "../../context/themeModeContext";
 import Empty from '../../img/empty_favorites.png'
 import './Favorites.css'
 
 
 const FavoritesView: FC = () => {
+
     return (
             <div>
                 <div>

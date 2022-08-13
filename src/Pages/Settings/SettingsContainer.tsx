@@ -3,11 +3,16 @@ import SettingsView from "./SettingsView";
 import Header from "../../Components/header/Header";
 import Menu from "../../Components/menu/Menu";
 import './Settings.css'
+import { useThemeContext } from "../../context/themeModeContext";
 
 
 const SettingsContainer: FC = () => {
+
+    const value = useThemeContext();
+    const themeClass = value.theme==='dark' ? "dark-theme" : "light-theme"
+
     return (
-        <div className="wrapper">
+        <div className={`wrapper ${themeClass}`}>
             <div>
                 <Header/>
             </div>

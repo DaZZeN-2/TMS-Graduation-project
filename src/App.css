@@ -1,6 +1,69 @@
-.App._dark {
+.dark-theme {
+    background-color: black;
+    color: #FFFFFF;
+}
+.light-theme {
+    background-color: white;
+    color: #80858B;
+}
+
+.light-input {
+    border: 2px solid #AFB2B6;
+    background-color: white;
+    color: #80858B;
+}
+
+.dark-input {
+    color: #FFFFFF;
+    background-color: #323537;
+}
+
+.dark-line {
+    background-color: #323537;
+}
+
+.light-line {
+    background-color: #AFB2B6;
+}
+
+.dark-button {
+    background-color: #323537;
+}
+
+.light-button {
+    background-color: #80858B;
+}
+
+.dark-form {
+    background-color: #242426;
+}
+
+.light-form {
+    background-color: #80858B;
+}
+
+.dark-rate-form {
+    background-color: #242426;
+}
+
+.light-rate-form {
+    background-color: #80858B;
+}
+
+.dark-text {
+    color: #FFFFFF;
+}
+
+.light-text {
+    color: #AFB2B6;
+}
+
+.dark-button-menu-wrapper {
+    border: 2px solid #323537;
     background-color: black;
 }
-.App {
+
+.light-button-menu-wrapper {
+    border: 2px solid #AFB2B6;
     background-color: white;
 }

@@ -21,7 +21,7 @@ const ForgotPassContainer: FC = () => {
             })
             .catch((error) => {
                 alert('Invalid Email!')
-              });
+            });
     }
 
 
