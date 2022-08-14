@@ -1,4 +1,4 @@
-# Worked on the project Maksim Kolyada(DaZZeN-2)
+# Worked on the project DaZZeN-2
 
 The project implies a platform that provides data about films.
 
@@ -10,4 +10,4 @@ The project has a search string so that users can find the movie they are intere
 
 I would be grateful if you rate this project.
 
-# Worked on the project Maksim Kolyada(DaZZeN-2)
+# Worked on the project DaZZeN-2
