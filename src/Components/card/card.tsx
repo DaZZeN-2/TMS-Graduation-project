@@ -1,6 +1,6 @@
 import {FC} from "react";
 import './card.css'
-import { IMovie } from '../../types'
+import { IGenre, IMovie } from '../../types'
 import { useNavigate } from "react-router-dom";
 import { useThemeContext } from "../../context/themeModeContext";
 
@@ -15,6 +15,8 @@ const Card: FC<CardProps> = ({movie}) => {
 
     const navigate = useNavigate()
 
+    const categorie = movie.genres.slice(0, 2).map((genre:IGenre) => genre.name_ru ).join(' · ')
+
     return(
         <div className='card-wrapper'>
             <div className="film-card-wrapper" onClick={() => navigate(`/film/${movie.id}`)}>
@@ -22,7 +24,9 @@ const Card: FC<CardProps> = ({movie}) => {
                 <img className="card-image" src={movie.big_poster} alt="cardIMG" />
             </div>
                 <h2 className={`film-title ${themeClass}`}>{movie.name_russian}</h2>
-                {/* <p className={`film-categories ${themeClass}`}">{movie.genres}</p> */}
+                <div className="genres-card-wrapper">
+                <p className={`film-categories ${themeClass}`}>{categorie}</p>
+                </div>
             </div>
         </div>
     )

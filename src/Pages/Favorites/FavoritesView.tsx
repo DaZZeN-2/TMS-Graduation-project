@@ -1,5 +1,4 @@
 import {FC} from "react";
-import { useThemeContext } from "../../context/themeModeContext";
 import Empty from '../../img/empty_favorites.png'
 import './Favorites.css'
 
@@ -11,8 +10,8 @@ const FavoritesView: FC = () => {
                 <div>
                     <img src={Empty} alt="Empty state text" />
                 </div>
-                <div className="favorite-text">
-                    <p>Empty state text</p>
+                <div>
+                    <p className="favorite-text">Empty state text</p>
                 </div>
             </div>
     );

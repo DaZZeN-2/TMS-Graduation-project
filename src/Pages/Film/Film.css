@@ -29,6 +29,11 @@
     font-size: 16px;
 }
 
+.categories:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 .post-title {
     color: #FFFFFF;
     font-family: 'Exo 2';
@@ -354,4 +359,10 @@
 
 .share-button:hover {
     background-color: #7B61FF;
+}
+
+.genres-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
 }

@@ -28,9 +28,9 @@
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
-    color: #AFB2B6;
     display: flex;
     cursor: pointer;
+    margin: 0;
 }
 
 .film-categories:hover {
@@ -46,4 +46,10 @@
 .film-card-wrapper {
     width: 218px;
     cursor: pointer;
+}
+
+.genres-card-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    width: 218px;
 }

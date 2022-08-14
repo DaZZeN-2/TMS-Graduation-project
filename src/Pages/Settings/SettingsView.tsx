@@ -14,6 +14,9 @@ const SettingsView: FC = () => {
     const themeClass = value.theme==='dark' ? "dark-form" : "light-form"
     const themeClassInput = value.theme==='dark' ? "dark-input" : "light-input"
     const themeClassText = value.theme==='dark' ? "dark-text" : "light-text"
+
+    const themeTitle = value.theme==='dark' ? "Dark" : "Light"
+    const themeText = value.theme==='dark' ? "light" : "dark"
     
 
     return (
@@ -65,12 +68,12 @@ const SettingsView: FC = () => {
                     <h2 className={`Profile-title ${themeClassText}`}>Color mode</h2>
                         <div className={`color-mode-wrapper ${themeClass}`}>
                             <div className="color-mode-text-wrapper">
-                                <h3 className={`color-mode-title ${themeClass}`}>Dark</h3>
-                                <p className={`color-mode-text ${themeClass}`}>Use dark thema</p>
+                                <h3 className={`color-mode-title ${themeClass}`}>{themeTitle}</h3>
+                                <p className={`color-mode-text ${themeClass}`}>Use {themeText} theme</p>
                             </div>
                         <div className="dark-mode-switcher">
                             <label className="switch">
-                                <input type="checkbox"/>
+                                <input checked={themeClass==='light-form'} type="checkbox"/>
                                 <span onClick={onClickTheme} className="slider round"></span>
                             </label>
                         </div>

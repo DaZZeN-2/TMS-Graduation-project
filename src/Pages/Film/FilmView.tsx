@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { IMovie } from '../../types';
+import { IGenre, IMovie } from '../../types';
 import IMDb from '../../img/imdb-rating-img.png'
 import Favorite from './Favorite';
 import Share from './Share';
@@ -30,7 +30,9 @@ const FilmView: FC<FilmProps> = ({movie}) => {
             </div>
             <div className='content-wrapper'>
                 <div className='categirie-wrapper'>
-                    {/* <p className='categories'>{movie?.genres}</p> */}
+                    <div className='genres-wrapper'>
+                {movie?.genres.map((genre:IGenre) => <p className='categories'>{genre.name_ru}</p>)}
+                    </div>
                 <div className='post-title-wrapper'>
                     <h1 className={`post-title ${themeClass}`}>{movie?.name_russian}</h1>
                 </div>

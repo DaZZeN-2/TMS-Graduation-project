@@ -3,13 +3,13 @@
     color: #FFFFFF;
 }
 .light-theme {
-    background-color: white;
+    background-color: #FFFFFF;
     color: #80858B;
 }
 
 .light-input {
     border: 2px solid #AFB2B6;
-    background-color: white;
+    background-color: #FFFFFF;
     color: #80858B;
 }
 
@@ -65,5 +65,5 @@
 
 .light-button-menu-wrapper {
     border: 2px solid #AFB2B6;
-    background-color: white;
+    background-color: #FFFFFF;
 }
