@@ -13,9 +13,25 @@
     color: #80858B;
 }
 
+.light-input:active, :focus {
+    border: 2px solid #7B61FF;
+}
+
+.light-input:active,:hover, :focus {
+    outline: none;
+}
+
 .dark-input {
     color: #FFFFFF;
     background-color: #323537;
+}
+
+.dark-input:active, :focus {
+    border: 2px solid #7B61FF;
+}
+
+.dark-input:active,:hover, :focus {
+    outline: none;
 }
 
 .dark-line {

@@ -22,9 +22,9 @@ const ProfileMenu: FC<ProfileMenuProps> = () => {
     const {isAuth, email} = useAuth();
 
     const value = useThemeContext();
-    const themeClass = value.theme==='dark' ? "dark-theme" : "light-theme"
-    const themeClassLine = value.theme==='dark' ? "dark-line" : "light-line"
-    const themeClassButton = value.theme==='dark' ? "dark-button-menu-wrapper" : "light-button-menu-wrapper"
+    const themeClass = value.theme==='light' ? "dark-theme" : "light-theme"
+    const themeClassLine = value.theme==='light' ? "dark-line" : "light-line"
+    const themeClassButton = value.theme==='light' ? "dark-button-menu-wrapper" : "light-button-menu-wrapper"
 
     return isAuth ? (
     <div className="dropdown-menu">

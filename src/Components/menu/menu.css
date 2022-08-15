@@ -19,6 +19,11 @@
 
 .home-link.active {
     color: #7B61FF;
+    border: none;
+}
+
+.home-link:active {
+    border: none;
 }
 
 
@@ -33,6 +38,11 @@
 
 .trends-link.active {
     color: #7B61FF;
+    border: none;
+}
+
+.trends-link:active {
+    border: none;
 }
 
 .favorites-link {
@@ -46,6 +56,11 @@
 
 .favorites-link.active {
     color: #7B61FF;
+    border: none;
+}
+
+.favorites-link:active {
+    border: none;
 }
 
 .settings-link {
@@ -59,6 +74,11 @@
 
 .settings-link.active {
     color: #7B61FF;
+    border: none;
+}
+
+.settings-link:active {
+    border: none;
 }
 
 .home {

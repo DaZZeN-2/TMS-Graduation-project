@@ -11,7 +11,7 @@ interface CardProps {
 const Card: FC<CardProps> = ({movie}) => {
 
     const value = useThemeContext();
-    const themeClass = value.theme==='dark' ? "dark-theme" : "light-theme"
+    const themeClass = value.theme==='light' ? "dark-theme" : "light-theme"
 
     const navigate = useNavigate()
 

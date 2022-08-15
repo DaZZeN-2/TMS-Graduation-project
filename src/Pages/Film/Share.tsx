@@ -9,7 +9,7 @@ interface ShareProps {
 const Share: FC<ShareProps> = () => {
 
   const value = useThemeContext();
-  const themeClass = value.theme==='dark' ? "dark-button" : "light-button"
+  const themeClass = value.theme==='light' ? "dark-button" : "light-button"
     
   return (
     <div>

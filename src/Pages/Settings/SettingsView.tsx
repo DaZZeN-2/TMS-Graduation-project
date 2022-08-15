@@ -11,12 +11,12 @@ const SettingsView: FC = () => {
     }
 
     const value = useThemeContext();
-    const themeClass = value.theme==='dark' ? "dark-form" : "light-form"
-    const themeClassInput = value.theme==='dark' ? "dark-input" : "light-input"
-    const themeClassText = value.theme==='dark' ? "dark-text" : "light-text"
+    const themeClass = value.theme==='light' ? "dark-form" : "light-form"
+    const themeClassInput = value.theme==='light' ? "dark-input" : "light-input"
+    const themeClassText = value.theme==='light' ? "dark-text" : "light-text"
 
-    const themeTitle = value.theme==='dark' ? "Dark" : "Light"
-    const themeText = value.theme==='dark' ? "light" : "dark"
+    const themeTitle = value.theme==='light' ? "Dark" : "Light"
+    const themeText = value.theme==='light' ? "light" : "dark"
     
 
     return (

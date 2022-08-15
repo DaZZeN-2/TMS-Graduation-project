@@ -7,7 +7,7 @@ import { useThemeContext } from "../../context/themeModeContext";
 
 const HomeContainer: FC = () => {
     const value = useThemeContext();
-    const themeClass = value.theme==='dark' ? "dark-theme" : "light-theme"
+    const themeClass = value.theme==='light' ? "dark-theme" : "light-theme"
     
     return (
         <div className={`wrapper ${themeClass}`}>

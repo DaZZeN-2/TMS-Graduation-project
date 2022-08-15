@@ -13,7 +13,7 @@ import { useThemeContext } from '../../context/themeModeContext';
 const FilmContainer: FC = () => {
 
     const value = useThemeContext();
-    const themeClass = value.theme==='dark' ? "dark-theme" : "light-theme"
+    const themeClass = value.theme==='light' ? "dark-theme" : "light-theme"
 
     const [movie, setMovie] = useState<IMovie | null>(null);
     const params = useParams<FilmContainerParams>();

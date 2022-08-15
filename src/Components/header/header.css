@@ -20,7 +20,11 @@
     position: relative;
 }
 
-.search-input:active, :hover, :focus {
+.search-input:active, :focus {
+    border: 2px solid #7B61FF;
+}
+
+.search-input:active,:hover, :focus {
     outline: none;
 }
 

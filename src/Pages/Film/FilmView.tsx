@@ -12,8 +12,8 @@ interface FilmProps {
 const FilmView: FC<FilmProps> = ({movie}) => {
 
     const value = useThemeContext();
-    const themeClass = value.theme==='dark' ? "dark-theme" : "light-theme"
-    const themeClassForm = value.theme==='dark' ? "dark-rate-form" : "light-rate-form"
+    const themeClass = value.theme==='light' ? "dark-theme" : "light-theme"
+    const themeClassForm = value.theme==='light' ? "dark-rate-form" : "light-rate-form"
 
     return (
         <div className={`post-wrapper ${themeClass}`}>

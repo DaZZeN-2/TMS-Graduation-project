@@ -9,7 +9,7 @@ interface FavoriteProps {
 const Favorite: FC<FavoriteProps> = () => {
 
   const value = useThemeContext();
-  const themeClass = value.theme==='dark' ? "dark-button" : "light-button"
+  const themeClass = value.theme==='light' ? "dark-button" : "light-button"
     
   return (
     <div>

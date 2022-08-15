@@ -9,7 +9,7 @@ interface SearchProps {
 const Search: FC<SearchProps> = () => {
 
     const value = useThemeContext();
-    const themeClass = value.theme==='dark' ? "dark-input" : "light-input"
+    const themeClass = value.theme==='light' ? "dark-input" : "light-input"
 
     return (
                 <div className="Search">
