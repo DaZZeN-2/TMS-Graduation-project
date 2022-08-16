@@ -1,5 +1,8 @@
 import './ForgotPass.css'
 import { FC, useState } from 'react';
+import { getAuth, sendPasswordResetEmail } from 'firebase/auth';
+import { useNavigate } from 'react-router-dom';
+import { RouteNames } from '../../Routes';
 
 interface LoginViewProps {
     handleClick: (email: string) => void;
@@ -8,6 +11,15 @@ interface LoginViewProps {
 const ForgotPassView: FC<LoginViewProps> = ({handleClick}) => {
 
     const [email, setEmail] = useState('');
+    const auth = getAuth();
+
+    const navigate = useNavigate();
+
+    const triggerResetEmail = async () => {
+        await sendPasswordResetEmail(auth, email);
+        console.log("Password reset email sent")
+        navigate(RouteNames.HOME);
+      }
 
     return(
         <div className="container">
@@ -20,7 +32,7 @@ const ForgotPassView: FC<LoginViewProps> = ({handleClick}) => {
                 <div>
                     <input onChange={(e) => setEmail(e.target.value)} value={email} className='reset-pass-input' placeholder='Your email' type="text" id='reset-pass'/>
                 </div>
-                <button onClick={() => handleClick(email)} className='forgot-pass-button'>Reset</button>
+                <button onClick={triggerResetEmail} className='forgot-pass-button'>Reset</button>
                 </div>
             </div>
         </div>

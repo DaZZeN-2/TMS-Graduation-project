@@ -13,6 +13,10 @@
     align-items: center;
 }
 
+.dropbtn:active {
+    border: none;
+}
+
 .dropbtn:hover {
     color: #7B61FF;
 }
