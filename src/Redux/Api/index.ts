@@ -5,9 +5,12 @@ const API = create ({
     baseURL: "https://kinobd.ru/api/films",
 })
 
-
-const getFilms = () => {
+const getFilm = () => {
     return API.get('')
 }
 
-export { getFilms };
+const getFilms = (page:number) => {
+    return API.get('', {page})
+}
+
+export { getFilms, getFilm };

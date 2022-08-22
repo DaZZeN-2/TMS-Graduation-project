@@ -184,6 +184,11 @@
     color: #FFFFFF;
 }
 
+.persons-flex {
+    display: flex;
+    width: 500px;
+}
+
 /* ----------------- */
 
 .film-actors-wrapper {

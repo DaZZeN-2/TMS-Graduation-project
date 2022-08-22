@@ -1,10 +1,10 @@
 import AppRouter from './Routes/AppRouter';
-import { Provider } from 'react-redux';
-import {store} from './Redux/store'
+
 import { ThemeModeProvider } from './context/ThemeModeProvider';
 import { Theme } from "./context/themeModeContext";
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
+import { fetchMovies, useMovieDispatch } from './Redux/slices/moviesSlice';
 
 
 const App = () => {
@@ -15,14 +15,18 @@ const App = () => {
     setTheme(value);
   };
 
+  const dispatch = useMovieDispatch();
+
+  useEffect(() => {
+      dispatch(fetchMovies(1))
+  })
+
   return (
-        <Provider store={store}>
           <ThemeModeProvider theme={theme} onChangeTheme={onChangeTheme}>
-            {/* <div className={themeClass}> */}
+            <div className={themeClass}>
             <AppRouter/>
-          {/* </div> */}
+          </div>
           </ThemeModeProvider>
-        </Provider>
   );
 }
 export default App;

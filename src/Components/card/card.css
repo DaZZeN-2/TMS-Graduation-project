@@ -53,3 +53,54 @@
     justify-content: flex-start;
     width: 218px;
 }
+
+.loading-wrapper {
+    width: 888px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 1000px;
+}
+
+.loading-form {
+    display: flex;
+    justify-content: center;
+    border-radius: 25px;
+    width: 161px;
+    height: 40px;
+}
+
+.loading {
+    border: solid 5px #7B61FF; 
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    animation: loading 1s infinite linear;
+    margin: 5px 0 10px 0;
+}
+
+.loading-text {
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    padding-right: 10px;
+    margin: 4px 0 10px 0;
+}
+
+@keyframes loading {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loading-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 888px;
+    height: 88vh;
+}

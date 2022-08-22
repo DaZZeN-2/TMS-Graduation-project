@@ -17,6 +17,9 @@ const Card: FC<CardProps> = ({movie}) => {
 
     const categorie = movie.genres.slice(0, 2).map((genre:IGenre) => genre.name_ru ).join(' · ')
 
+    console.log(movie);
+    
+
     return(
         <div className='card-wrapper'>
             <div className="film-card-wrapper" onClick={() => navigate(`/film/${movie.id}`)}>

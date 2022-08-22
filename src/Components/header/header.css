@@ -20,9 +20,10 @@
     position: relative;
 }
 
-.search-input:active, :focus {
+.search-input:focus {
     border: 2px solid #7B61FF;
 }
+
 
 .search-input:active,:hover, :focus {
     outline: none;
@@ -35,13 +36,28 @@
 }
 
 .Search {
-    margin-top: 40px;
+    position: absolute;
+    /* margin-top: 40px; */
     padding-left: 45px;
 }
 
 .filter-icon {
-    position: absolute;
-    left: 1125px;
-    top: 52px;
+    position: relative;
+    left: -36px;
+    top: 5px;
     cursor: pointer;
+}
+
+.results {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    position: relative;
+    background-color: #323537;
+    cursor: pointer;
+    padding: 0 20px;
+}
+
+.results:hover {
+    color: #7B61FF
 }
