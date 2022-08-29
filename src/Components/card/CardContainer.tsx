@@ -1,6 +1,4 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import { FilmContainerParams } from "../../types";
 import Card from "./card";
 import { IMovie } from "../../types";
 import { useThemeContext } from "../../context/themeModeContext";
@@ -13,15 +11,17 @@ const CardContainer = () => {
 
     const dispatch = useMovieDispatch();
     
-    // const foundMovies = useSelector((state:any) => state.movies.value);
-    const foundMovies = useAppSelector(state => state.rootReducer.movies);
+    const foundMovies = useAppSelector(state => state.persistedReducer.movies);
+
     const value = useThemeContext();
     const themeClassLoading = value.theme==='light' ? "dark-loading" : "light-loading"
 
     const [movies, setMovies] = useState<IMovie []>([]);
-    const params = useParams<FilmContainerParams>();
     const [page, setPage] = useState<number>(1);
-    const [fetching, setFetching] = useState<boolean>(false)
+    const [fetching, setFetching] = useState<boolean>(true)
+
+    // const moviesNew = foundMovies.movie?.data === undefined ? [] : foundMovies.movie?.data;
+    // const pageNew = foundMovies.movie?.current_page === undefined ? 1 : foundMovies.movie?.current_page;
 
     const scrollHandler = (e:any) => {
         if(e.target.documentElement.scrollHeight - (e.target.documentElement.scrollTop + window.innerHeight) < 100) {
@@ -33,33 +33,32 @@ const CardContainer = () => {
         document.addEventListener('scroll', scrollHandler)
         return function () {
             document.removeEventListener('scroll', scrollHandler)
+            // setFetching(false)
+        } 
+    }, [])
+
+    useEffect(() => {
+        if(fetching) {
+            console.count('useEffect')
+            console.log(page)
+            dispatch(fetchMovies(page))
+            console.log('moviesNew',...foundMovies.movie.data)
+            console.log('movies',movies)
+            const mergeData = [...movies,...foundMovies.movie.data]
+            console.log('mergeData',mergeData)
+            // const mergeData:IMovie[] = []
+            // console.log(foundMovies)
+
+            console.log(fetching)
+            setMovies(mergeData)
+            setPage(currentPage => currentPage + 1);
+            setFetching(false)
         }
-    }, [])
+
+    }, [fetching, page])
 
 
-    useEffect(() => {
-        dispatch(fetchMovies(page))
-        // setMovies(foundMovies.movie?.data === undefined ? [] : foundMovies.movie?.data)
-    }, [])
-
-    useEffect(() => {
-        dispatch(fetchMovies(page))
-        .then(() => {
-            if(fetching){
-                const moviesNew = foundMovies.movie?.data === undefined ? [] : foundMovies.movie?.data;
-                const mergeData = [...movies, ...moviesNew]
-                const pageNew = foundMovies.movie?.current_page === undefined ? 1 : foundMovies.movie?.current_page;
-                setPage(currentPage => pageNew + 1)
-                setMovies(mergeData)
-                setFetching(true)
-            }
-        })
-        .finally(() => setFetching(false))
-        .catch(error => {
-            console.error(error);
-        });
-        
-
+// =================================================>
         // if(fetching){
         //     const moviesNew = foundMovies.value?.data === undefined ? [] : foundMovies.value?.data;
         //     const pageNew = foundMovies.value?.current_page === undefined ? 1 : foundMovies.value?.current_page;
@@ -90,15 +89,13 @@ const CardContainer = () => {
         //     getFilms(page)
         //     .then((res:any) => {
         //         const apiRes = res.data.data
-               
+        
         // })
         // .finally(() => setFetching(false))
         // .catch(error => {
         //     console.error(error);
         // });
         // }
-    }, [params.id, fetching])
-
 
         if(fetching) {
             return <div className="loading-wrapper">
@@ -109,14 +106,15 @@ const CardContainer = () => {
                     </div>
         }
 
-    // if(!movies) {
-    //     return <div className="loading-wrap">
-    //     <div className={`loading-form ${themeClassLoading}`}>
-    //         <p className={`loading-text ${themeClassLoading}`}>Loading</p>
-    //         <span className={`loading ${themeClassLoading}`}></span>
-    //     </div>
-    // </div>
-    // }
+    if(!movies) {
+        return <div className="loading-wrap">
+        <div className={`loading-form ${themeClassLoading}`}>
+            <p className={`loading-text ${themeClassLoading}`}>Loading</p>
+            <span className={`loading ${themeClassLoading}`}></span>
+        </div>
+    </div>
+    }
+
 
         return (
     <div className="card-container-wrapper">

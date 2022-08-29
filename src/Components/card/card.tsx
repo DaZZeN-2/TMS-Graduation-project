@@ -17,7 +17,6 @@ const Card: FC<CardProps> = ({movie}) => {
 
     const categorie = movie.genres.slice(0, 2).map((genre:IGenre) => genre.name_ru ).join(' · ')
 
-    console.log(movie);
     
 
     return(

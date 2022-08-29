@@ -15,11 +15,11 @@ const App = () => {
     setTheme(value);
   };
 
-  const dispatch = useMovieDispatch();
+  // const dispatch = useMovieDispatch();
 
-  useEffect(() => {
-      dispatch(fetchMovies(1))
-  })
+  // useEffect(() => {
+  //     dispatch(fetchMovies(1))
+  // })
 
   return (
           <ThemeModeProvider theme={theme} onChangeTheme={onChangeTheme}>
