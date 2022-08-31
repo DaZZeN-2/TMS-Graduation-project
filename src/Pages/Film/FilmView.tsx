@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { FC, useState } from 'react'
 import { IGenre, IMovie, IPerson } from '../../types';
 import IMDb from '../../img/imdb-rating-img.png'
 import Favorite from './Favorite';
@@ -9,6 +9,8 @@ interface FilmProps {
     movie: IMovie | null,
 }
 
+
+
 const FilmView: FC<FilmProps> = ({movie}) => {
 
     const value = useThemeContext();
@@ -17,13 +19,15 @@ const FilmView: FC<FilmProps> = ({movie}) => {
 
     const persons = movie?.persons.map((person:IPerson) => person.name_english ).join(', ')
 
+    console.log(movie)
+
     return (
         <div className={`post-wrapper ${themeClass}`}>
             <div className='post-img-wrapper'>
                 <img className='post-img' src={movie?.big_poster} alt="movie_poster" />
                 <div className='buttons-wrapper'>
                 <div>
-                    <Favorite/>
+                    <Favorite movie={movie} key={movie?.id}/>
                 </div>
                 <div>
                     <Share/>

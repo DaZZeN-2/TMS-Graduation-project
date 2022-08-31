@@ -3,7 +3,7 @@ export interface IMovie {
     data: string,
     big_poster: string,
     name_russian: string,
-    id: string,
+    id: number,
     genres: IGenre[],
     rating_imdb: string,
     time_minutes: string,

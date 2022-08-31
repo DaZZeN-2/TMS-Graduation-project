@@ -30,22 +30,22 @@ const SearchContainer = () => {
         }
     }, [])
 
-    // useEffect(() => {
-    //     if(fetching) {
-    //         dispatch(fetchMovies(page))
-    //         .then((res:any) => {
-    //             const moviesNew = foundMovies.movie?.data === undefined ? [] : foundMovies.movie?.data;
-    //             const mergeData = [...movies, ...moviesNew]
-    //             const pageNew = foundMovies.movie?.current_page === undefined ? 1 : foundMovies.movie?.current_page;
-    //             setPage(currentPage => pageNew + 1)
-    //             setMovies(mergeData)
-    //     })
-    //     .finally(() => setFetching(false))
-    //     .catch(error => {
-    //         console.error(error);
-    //     });
-    //     }
-    // }, [params.id, fetching])
+    useEffect(() => {
+        if(fetching) {
+            dispatch(fetchMovies(page))
+            .then((res:any) => {
+                const moviesNew = foundMovies.movie?.data === undefined ? [] : foundMovies.movie?.data;
+                const mergeData = [...movies, ...moviesNew]
+                const pageNew = foundMovies.movie?.current_page === undefined ? 1 : foundMovies.movie?.current_page;
+                setPage(currentPage => pageNew + 1)
+                setMovies(mergeData)
+        })
+        .finally(() => setFetching(false))
+        .catch(error => {
+            console.error(error);
+        });
+        }
+    }, [params.id, fetching])
 
     return (
         <>

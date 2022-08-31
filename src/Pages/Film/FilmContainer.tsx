@@ -36,7 +36,6 @@ const FilmContainer: FC = () => {
         <div>
             <FilmView movie={movie} key={movie?.id}/>
         </div>
-        
         </div>
         </div>
     );

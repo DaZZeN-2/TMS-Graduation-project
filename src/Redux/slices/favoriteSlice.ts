@@ -1,20 +1,29 @@
-import { createSlice, PayloadAction} from '@reduxjs/toolkit'
+import { createSlice} from '@reduxjs/toolkit'
+
+interface FavoritesState {
+    favorites: number[],
+}
+
+const initialState: FavoritesState = {
+    favorites: []
+}
 
 export const favoriteSlice = createSlice({
     name: 'favorites',
-    initialState: {
-        value: [],
-    },
+    initialState,
     reducers: {
-        setMovieFavorite: (state, action: PayloadAction<[]>) => {
-            state.value = action.payload;
+        setMovieToFavorite: (state, action) => {
+            state.favorites.push(action.payload.movieId);
         },
-        removeMovieFavorite: (state, action: PayloadAction<[]>) => {
-            state.value = action.payload;
-        },
+        // removeMovieFromFavorite: (state, action) => {
+        //     state.favorite = action.payload;
+        // },
+        // favoriteMovie: (state, action: PayloadAction<IFavorite>) => {
+        //     state.favorite = action.payload
+        // }
     }
 })
 
-export const {setMovieFavorite} = favoriteSlice.actions
+export const {setMovieToFavorite} = favoriteSlice.actions
 
 export default favoriteSlice.reducer

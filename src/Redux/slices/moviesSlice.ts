@@ -13,8 +13,6 @@ export const fetchMovies = createAsyncThunk('movies/fetchMovies',
     (page: number) => {
         return getFilms(page)
             .then((r: any) => {
-                console.log(page)
-                console.log(r.data)
                     return r.data
             })
     })
@@ -22,7 +20,7 @@ export const fetchMovies = createAsyncThunk('movies/fetchMovies',
 export const moviesSlice = createSlice({
     name: 'movies',
     initialState: {
-        movie: {} as IResult,
+        movie: null as IResult | null,
     },
     reducers: {
         setInitialMovies: (state, action) => {
