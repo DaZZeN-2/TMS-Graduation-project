@@ -13,7 +13,6 @@ const ForgotPassContainer: FC = () => {
         const auth = getAuth();
         sendSignInLinkToEmail(auth, email, actionCodeSettings)
             .then((user:any) => {
-                console.log(user);
                 dispatch(setUser({
                     email: user.email,
                 }));

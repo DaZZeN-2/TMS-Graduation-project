@@ -19,8 +19,6 @@ const FilmView: FC<FilmProps> = ({movie}) => {
 
     const persons = movie?.persons.map((person:IPerson) => person.name_english ).join(', ')
 
-    console.log(movie)
-
     return (
         <div className={`post-wrapper ${themeClass}`}>
             <div className='post-img-wrapper'>

@@ -13,7 +13,7 @@ const CardContainer = () => {
 
     const dispatch = useMovieDispatch();
     
-    const foundMovies = useAppSelector(state => state.persistedReducer.movies);
+    const foundMovies = useAppSelector(state => state.rootReducer.movies);
 
     const value = useThemeContext();
     const themeClassLoading = value.theme==='light' ? "dark-loading" : "light-loading"

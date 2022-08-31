@@ -13,14 +13,12 @@ export const favoriteSlice = createSlice({
     initialState,
     reducers: {
         setMovieToFavorite: (state, action) => {
-            state.favorites.push(action.payload.movieId);
+            state.favorites.push(action.payload);
         },
-        // removeMovieFromFavorite: (state, action) => {
-        //     state.favorite = action.payload;
-        // },
-        // favoriteMovie: (state, action: PayloadAction<IFavorite>) => {
-        //     state.favorite = action.payload
-        // }
+        removeMovieFromFavorite: (state, action) => {
+            state.favorites = action.payload(null);
+        },
+        favoriteMovie: (state, action) => {}
     }
 })
 

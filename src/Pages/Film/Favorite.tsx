@@ -22,7 +22,7 @@ const Favorite: FC<FavoriteProps> = ({movie}) => {
 const handleClick = () => {
     dispatch(setMovieToFavorite(movie?.id))
   }
-  console.log(movie?.id)
+
 
     
   return (
