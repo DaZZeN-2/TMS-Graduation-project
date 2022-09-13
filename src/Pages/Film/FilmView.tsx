@@ -1,5 +1,5 @@
-import { FC } from 'react'
-import { IGenre, IMovie } from '../../types';
+import { FC, useState } from 'react'
+import { IGenre, IMovie, IPerson } from '../../types';
 import IMDb from '../../img/imdb-rating-img.png'
 import Favorite from './Favorite';
 import Share from './Share';
@@ -9,11 +9,15 @@ interface FilmProps {
     movie: IMovie | null,
 }
 
+
+
 const FilmView: FC<FilmProps> = ({movie}) => {
 
     const value = useThemeContext();
     const themeClass = value.theme==='light' ? "dark-theme" : "light-theme"
     const themeClassForm = value.theme==='light' ? "dark-rate-form" : "light-rate-form"
+
+    const persons = movie?.persons.map((person:IPerson) => person.name_english ).join(', ')
 
     return (
         <div className={`post-wrapper ${themeClass}`}>
@@ -21,7 +25,7 @@ const FilmView: FC<FilmProps> = ({movie}) => {
                 <img className='post-img' src={movie?.big_poster} alt="movie_poster" />
                 <div className='buttons-wrapper'>
                 <div>
-                    <Favorite/>
+                    <Favorite movie={movie} key={movie?.id}/>
                 </div>
                 <div>
                     <Share/>
@@ -94,8 +98,8 @@ const FilmView: FC<FilmProps> = ({movie}) => {
                     <div className='film-production-data'>
                         <p className='film-production'>Production:</p>
                     </div>
-                    <div>
-                        {/* <p className='film-production-data-text'>{movie?.persons}</p> */}
+                    <div className='persons-flex'>
+                    <p className='film-production-data-text'>{persons}</p>
                     </div>
                     </div>
 
@@ -103,8 +107,8 @@ const FilmView: FC<FilmProps> = ({movie}) => {
                     <div className='film-actors-data'>
                         <p className='film-actors'>Actors:</p>
                     </div>
-                    <div>
-                        {/* <p className='film-actors-data-text'>{movie?.persons}</p> */}
+                    <div className='persons-flex'>
+                        <p className='film-actors-data-text'>{persons}</p>
                     </div>
                     </div>
 
@@ -112,8 +116,8 @@ const FilmView: FC<FilmProps> = ({movie}) => {
                     <div className='film-director-data'>
                         <p className='film-director'>Director:</p>
                     </div>
-                    <div>
-                        {/* <p className='film-director-data-text'>{movie?.persons}</p> */}
+                    <div className='persons-flex'>
+                        <p className='film-director-data-text'>{persons}</p>
                     </div>
                     </div>
 
@@ -121,8 +125,8 @@ const FilmView: FC<FilmProps> = ({movie}) => {
                     <div className='film-writer-data'>
                         <p className='film-writer'>Writers:</p>
                     </div>
-                    <div>
-                        {/* <p className='film-writer-data-text'>{movie?.persons}</p> */}
+                    <div className='persons-flex'>
+                        <p className='film-writer-data-text'>{persons}</p>
                     </div>
                     </div>
                 </div>

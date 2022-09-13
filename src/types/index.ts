@@ -1,8 +1,9 @@
 export interface IMovie {
+    length: number;
     data: string,
     big_poster: string,
     name_russian: string,
-    id: string,
+    id: number,
     genres: IGenre[],
     rating_imdb: string,
     time_minutes: string,
@@ -11,7 +12,7 @@ export interface IMovie {
     premiere_world: string,
     budget: string,
     year_start: string,
-    persons: string,
+    persons: IPerson[],
     country_ru: string,
 }
 
@@ -22,4 +23,9 @@ export type FilmContainerParams = {
 export interface IGenre {
     id: number,
     name_ru: string,
+}
+
+export interface IPerson {
+    id: number,
+    name_english: string,
 }

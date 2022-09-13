@@ -34,7 +34,7 @@ const RegisterView: FC<RegisterViewProps> = ({handleClick}) => {
                     <div className="email-container">
                     <label htmlFor="email">Name</label>
                         <div>
-                            <input value={name} onChange={(e) => setName(e.target.value)} className="email-input" type="text" placeholder="Your name" id="email"/>
+                            <input value={email} onChange={(e) => setName(e.target.value)} className="email-input" type="text" placeholder="Your name" id="name"/>
                         </div>
                     </div>
                     <div className="email-container">

@@ -11,28 +11,29 @@ const SettingsView: FC = () => {
     }
 
     const value = useThemeContext();
-    const themeClass = value.theme==='light' ? "dark-form" : "light-form"
-    const themeClassInput = value.theme==='light' ? "dark-input" : "light-input"
-    const themeClassText = value.theme==='light' ? "dark-text" : "light-text"
+    const themeClassForm = value.theme==='dark' ? "light-form" : "dark-form"
+    const themeClassInput = value.theme==='dark' ? "light-input" : "dark-input"
+    const themeClassText = value.theme==='dark' ? "light-text" : "dark-text"
 
-    const themeTitle = value.theme==='light' ? "Dark" : "Light"
-    const themeText = value.theme==='light' ? "light" : "dark"
+    const themeTitle = value.theme==='dark' ? "Dark" : "Light"
+    const themeText = value.theme==='dark' ? "light" : "dark"
+    const themeClassLable = value.theme==='dark' ? "light-lable" : "dark-lable"
     
 
     return (
             <div className="Settings-global-wrapper">
                 <h2 className={`Profile-title ${themeClassText}`}>Profile</h2>
-                <div className={`name-wrapper ${themeClass}`}> 
+                <div className={`name-wrapper ${themeClassForm}`}> 
                     <div className="name-input-wrapper">
                         <div className="name-settings-wrapper">
-                            <label htmlFor="Name">Name</label>
+                            <label className={`lable-theme ${themeClassLable}`} htmlFor="Name">Name</label>
                         </div>
                         <input className={`name-settings-input ${themeClassInput}`} type="text" id="Name" placeholder="Name"/>
                     </div>
                     
                     <div className="email-input-wrapper">
                         <div className="email-settings-wrapper">
-                        <label htmlFor="Email">Email</label>
+                        <label className={`lable-theme ${themeClassLable}`} htmlFor="Email">Email</label>
                         </div>
                         <input className={`email-settings-input ${themeClassInput}`} type="email" id="Email" placeholder="Email"/>
                     </div>
@@ -40,23 +41,23 @@ const SettingsView: FC = () => {
 
                 <div>
                 <h2 className={`Profile-title ${themeClassText}`}>Password</h2>
-                <div className={`change-password-wrapper ${themeClass}`}>
+                <div className={`change-password-wrapper ${themeClassForm}`}>
                     <div className="name-input-wrapper">
                         <div className="name-settings-wrapper">
-                            <label htmlFor="Name">Password</label>
+                            <label className={`lable-theme ${themeClassLable}`} htmlFor="Name">Password</label>
                         </div>
                         <input className={`name-settings-input ${themeClassInput}`} type="password" id="Name" placeholder="Your password"/>
                     </div>
                 <div className="confirm-pass">
                     <div className="email-input-wrapper">
                         <div className="email-settings-wrapper">
-                        <label htmlFor="Email">New password</label>
+                        <label className={`lable-theme ${themeClassLable}`} htmlFor="Email">New password</label>
                         </div>
                         <input className={`email-settings-input ${themeClassInput}`} type="password" id="Email" placeholder="New password"/>
                     </div>
-                    <div className="email-input-wrapper">
+                    <div className="password-input-wrapper">
                         <div className="email-settings-wrapper">
-                        <label htmlFor="Email">Confirm password</label>
+                        <label className={`lable-theme ${themeClassLable}`} htmlFor="Email">Confirm password</label>
                         </div>
                         <input className={`email-settings-input ${themeClassInput}`} type="password" id="Email" placeholder="Confirm password"/>
                     </div>
@@ -66,15 +67,15 @@ const SettingsView: FC = () => {
                 <div>
                     <div className="color-mode-settings-wrapper">
                     <h2 className={`Profile-title ${themeClassText}`}>Color mode</h2>
-                        <div className={`color-mode-wrapper ${themeClass}`}>
+                        <div className={`color-mode-wrapper ${themeClassForm}`}>
                             <div className="color-mode-text-wrapper">
-                                <h3 className={`color-mode-title ${themeClass}`}>{themeTitle}</h3>
-                                <p className={`color-mode-text ${themeClass}`}>Use {themeText} theme</p>
+                                <h3 className={`color-mode-title ${themeClassForm}`}>{themeTitle}</h3>
+                                <p className={`color-mode-text ${themeClassForm}`}>Use {themeText} theme</p>
                             </div>
                         <div className="dark-mode-switcher">
-                            <label className="switch">
-                                <input checked={themeClass==='light-form'} type="checkbox"/>
-                                <span onClick={onClickTheme} className="slider round"></span>
+                            <label className={`switch ${themeClassLable}`}>
+                                <input onClick={onClickTheme} checked={themeClassForm==='light-form'} type="checkbox"/>
+                                <span className="slider round"></span>
                             </label>
                         </div>
                         </div>

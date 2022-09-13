@@ -19,7 +19,6 @@
 }
 
 .name-settings-input {
-    background-color: #323537;
     color: #FFFFFF;
     border-radius: 10px;
     height: 48px;
@@ -30,6 +29,10 @@
     font-size: 16px;
     border: none;
     text-indent: 20px;
+}
+
+.name-settings-input:focus {
+    border: 2px solid #7B61FF;
 }
 
 .name-input-wrapper {
@@ -37,7 +40,6 @@
 }
 
 .email-settings-input {
-    background-color: #323537;
     color: #FFFFFF;
     border-radius: 10px;
     height: 48px;
@@ -49,9 +51,16 @@
     border: none;
     text-indent: 20px;
 }
+.email-settings-input:focus {
+    border: 2px solid #7B61FF;
+}
 
 .email-input-wrapper {
     padding: 40px 40px 0 0;
+}
+
+.password-input-wrapper {
+    padding: 25px 40px 0 0;
 }
 
 .name-settings-wrapper {
@@ -66,7 +75,6 @@
     display: flex;
     width: 889px;
     height: 280px;
-    background-color: #242426;
     border-radius: 10px;
     margin-top: 16px;
 }
@@ -78,7 +86,6 @@
 .color-mode-wrapper {
     width: 889px;
     height: 100px;
-    background-color: #242426;
     border-radius: 10px;
     display: flex;
     align-items: center;

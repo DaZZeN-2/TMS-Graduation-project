@@ -31,7 +31,7 @@ const ProfileMenu: FC<ProfileMenuProps> = () => {
         <button onClick={myFunction} className={`dropbtn ${themeClass}`}>
             <div className="avatar"><img src={isNotAuth} alt="profile-icon" /></div>
             {email}
-            <img src={Vector} className="Vector"/>
+            <img src={Vector} className="Vector" alt="vector"/>
             </button>
         <div id="myDropdown" className={`dropdown-content ${themeClassButton}`}>
         <button className={`dropdown-button ${themeClass}`}>Edit Profile</button>
